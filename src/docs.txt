@@ -1,0 +1,54 @@
+B1: Install package: 
+npm install --save antd @ant-design/icons date-fns firebase lodash react-router-dom styled-components
+
+B2: Login Firebase => Create App => Lấy ra Script firebaseConfig
+    => vào project tạo file firebase/config.js và dán đoạn script vào.
+
+B3: Truy cập Fb Developer => Tạo App => Setup url => Lấy AppID - Seret Key 
+    => Quay lại Firebase và dán vào => Save
+
+    - Cài đặt các thông tin cơ bản của ứng dụng
+        + Miền ứng dụng: https://localhost:3000/
+        + URL chính sách quyền riêng tư: https://tinphuoc.net/2019/03/11/url-chinh-sach-quyen-rieng-tu/
+        + Xóa dữ liệu người dùng: https://localhost:3000/
+    - Kích hoạt Chế độ của ứng dụng -> Chính thức
+    - Xét duyệt ứng dụng -> Quyền và tính năng -> cấp quyền cho public_profile
+
+
+B4: viết function Login Fb
+
+B5: Dựng UI
+
+B6: Tạo function AuthProvider từ AuthContext = React.createContext()
+
+B7: Kiểm tra User có hợp lệ hay ko bằng sự kiện onAuthStateChanged để lắng nghe sự kiện
+khi có sự thay đổi từ value user.
+
+B8: Gắn AuthProvider vào App.js
+
+B9: Viết function xử lý các document trong service.js
+
+B10: Kiểm tra user này có từng login fb chưa, nếu chưa thì add vào firestore => gọi từ service.js
+
+B11: Tạo folder emulators 
+=> chạy terminal CLI 
+=>  . trường hợp chưa login: firestore login:ci 
+    . trường hợp đã login: firestore login
+
+B12: firestore init => chọn các cài đặt cần cài => enter
+
+B13: Cấu hình url Emulators trong file config.js
+
+B14: Tạo sự kiện lắng nghe danh sách rooms của user trong useFireStore.js
+
+B15: Tạo 1 AppProvider để call qa useFireStore lấy ra các rooms khi có sự thay đổi
+
+B16: Bọc AppProvider bên trong AuthProvider ở App.js
+
+B17: Tạo Modal AddRoomModal.js và truyền vào App.js
+
+B18: Xử lý đọc data của room lên ChatWindow.js
+
+B19: Check xem user có nằm trong list user của room ko và truyền members vào AppProvider
+
+B20: Lấy ra selectedRoom và ds member show lên view
