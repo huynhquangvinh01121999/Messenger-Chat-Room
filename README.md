@@ -1,4 +1,5 @@
-# Getting Started with Create React App
+# Đây là một ứng dụng chat room
+## Công nghệ sử dụng: React + Redux + Firebase
 Install package: 
 npm install --save antd @ant-design/icons date-fns firebase lodash react-router-dom styled-components
 
